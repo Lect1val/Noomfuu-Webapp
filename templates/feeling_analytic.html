@@ -106,7 +106,7 @@
     <!-- Begin Navbar-->
     <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light shadow p-2 mb-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index"><img src="../static/Artwork_Asset/Logo.png" style="height: 50px;"></a>
+            <a class="navbar-brand" href=""><img src="../static/Artwork_Asset/Logo.png" style="height: 50px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -148,24 +148,14 @@
                         </th>
                     </tr>
                     <!--have to be loop of getUsername-->
+                    {% for item in my_user_lists%}
                     <tr>
                         <td class="contact_list">
-                            <a href="/profile" class="contact_username">Username</a>
+                            <a href="/profile" class="contact_username">{{item}}</a>
                             <!--href to user's page-->
                         </td>
                     </tr>
-                    <tr>
-                        <td class="contact_list">
-                            <a href="/profile" class="contact_username">Username</a>
-                            <!--href to user's page-->
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="contact_list">
-                            <a href="/profile" class="contact_username">Username</a>
-                            <!--href to user's page-->
-                        </td>
-                    </tr>
+                    {% endfor %}
                     <!--ending loop-->
                 </table>
             </div>
