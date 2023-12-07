@@ -15,6 +15,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     
+    
     user_ref = db.collection(u'User')  
     users = user_ref.stream()
     nick_name_list = []
